@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CODEX</title>
+</head>
+<script type="text/javascript">
+    function toggle() {
+
+    document.getElementById("sidenav").classList.toggle('active');
+    document.getElementById("menuBtn").classList.toggle('btn_active');
+
+    }
+</script>
+<body>
+    
+    <div id="sidenav" class="main-menu"">
+        <ul>
+            <li><a class="active_home" id=" heading" href="index.html">Home</a></li>
+        <li><a id="heading" href="stack_page_1.html">Stack</a></li>
+        <li><a href="stack_page_1.html">What is a Stack?</a></li>
+        <li><a href="stack_page_1_2.html">implementing a stack using arrays</a></li>
+        <li><a href="stack_page_2.html">implementing a stack using linked list</a></li>
+        <li><a id="heading" href="queue_page_1.html">Queue</a></li>
+        <li><a href="queue_page_1.html">What is a Queue?</a></li>
+        <li><a href="queue_page_1_2.html">implementing a queue using arrays</a></li>
+        <li><a href="queue_page_2.html">implementing a queue using linked list</a></li>
+        <li><a id="heading" href="videos.html">Videos</a></li>
+        <li><a id="heading" href="compiler.html">Compiler</a></li>
+        </ul>
+    </div>
+
+
+    <div id="menuBtn" class="menu-btn" onclick="toggle()">
+        <div class="menu-bar"></div>
+        <div class="menu-bar"></div> 
+        <div class="menu-bar"></div>
+    </div>
+    <div id="header">
+        <img id="logo" src="images/logo.png" alt="codex logo">
+        
+    </div>
+
+    <div id="main">
+        <br><br><br><br>
+        <a id="button" href="stack_page_1.html"><img src="images/Stack Button.png" alt="stack button"></a>
+        <br><br><br><br>
+        <a id="button" href="queue_page_1.html"><img src="images/Queue Button.png" alt="queue button"></a>
+        <br> <br> <br> <br><br> <br> <br> <br>
+    </div> 
+
+    <div id="footer">
+       <br>
+       <br>
+       <br>
+       <br>
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CODEX</title>
+</head>
+<script type="text/javascript">
+    function toggle() {
+
+    document.getElementById("sidenav").classList.toggle('active');
+    document.getElementById("menuBtn").classList.toggle('btn_active');
+
+    }
+</script>
+<body>
+    <div id="sidenav" class="main-menu"">
+        <ul>
+        <li><a id="heading" href="index.html">Home</a></li>
+        <li><a id="heading" href="stack_page_1.html">Stack</a></li>
+        <li><a href="stack_page_1.html">What is a Stack?</a></li>
+        <li><a class="active" href="stack_page_1_2.html">implementing a stack using arrays</a></li>
+        <li><a href="stack_page_2.html">implementing a stack using linked list</a></li>
+        <li><a id="heading" href="queue_page_1.html">Queue</a></li>
+        <li><a href="queue_page_1.html">What is a Queue?</a></li>
+        <li><a href="queue_page_1_2.html">implementing a queue using arrays</a></li>
+        <li><a href="queue_page_2.html">implementing a queue using linked list</a></li>
+        <li><a id="heading" href="videos.html">Videos</a></li>
+        <li><a id="heading" href="compiler.html">Compiler</a></li>
+        </ul>
+    </div>
+
+
+    <div id="menuBtn" class="menu-btn" onclick="toggle()">
+        <div class="menu-bar"></div>
+        <div  class="menu-bar"></div>
+        <div  class="menu-bar"></div>
+    </div>
+
+    <div id="header_small">
+        <a href="index.html"><img id="logo_small" src="images/logo.png" alt="codex logo"></a>
+
+    </div>
+
+    <br><br><br><br>
+    <div id="main">
+     
+        <br><br><br>
+        <!-- buttons at top of page -->
+        <div id="buttonWrapper">
+            <a href="stack_page_1.html"><button type="button" id="prevP"> < previous</button></a>
+            <a href="stack_page_2.html"><button type="button" id="nextP"> next > </button></a>
+        </div> <br>
+
+        <h1>Stack</h1>
+        <h2>Implementing a stack using arrays:</h2>
+        <p>
+            Let's use the <strong>push</strong> function with the <strong>input:</strong> <br>
+            <strong>2, 3, 5, 7, 9</strong> <br>
+
+            And then delete from the stack until it is empty using the <strong>pop</strong> function:
+        </p> 
+        
+        <!-- <h3>push:</h3> -->
+ 
+        <img src="animations/stack(array).gif" alt=""> <br><br>
+
+        <br><br><br><br>
+
+        <p>
+            Below shows the code for implementing a stack using an array:
+        </p><br><br><br><br><br><br>
+
+        <div id="compiler">
+
+                <iframe height="1000px" width="100%" src="https://repl.it/repls/QuickwittedWobblyHypotenuse?lite=true"
+                    scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true"
+                    sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+                
+        </div>
+
+       
+      <!-- buttons at bottom of page -->
+       <div id="buttonWrapper">
+           <a href="stack_page_1.html"><button type="button" id="prevP">< previous</button></a>
+           <a href="stack_page_2.html"><button type="button" id="nextP">next ></button></a>
+       </div> <br>
+
+        <br><br><br><br><br><br><br>
+    </div>
+
+    <div id="footer">
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</body>
+
+</html>

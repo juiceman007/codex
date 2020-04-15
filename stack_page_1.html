@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CODEX</title>
+</head>
+<script type="text/javascript">
+    function toggle() {
+
+    document.getElementById("sidenav").classList.toggle('active');
+    document.getElementById("menuBtn").classList.toggle('btn_active');
+
+    }
+</script>
+<body>
+       <!-- side-navigation bar -->
+        <div id="sidenav" class="main-menu"">
+        <ul>
+            <li><a id="heading" href="index.html">Home</a></li>
+            <li><a id="heading" href="stack_page_1.html">Stack</a></li>
+            <li><a class="active" href="stack_page_1.html">What is a Stack?</a></li>
+            <li><a href="stack_page_1_2.html">implementing a stack using arrays</a></li>
+            <li><a href="stack_page_2.html">implementing a stack using linked list</a></li>
+            <li><a id="heading" href="queue_page_1.html">Queue</a></li>
+            <li><a href="queue_page_1.html">What is a Queue?</a></li>
+            <li><a href="queue_page_1_2.html">implementing a queue using arrays</a></li>
+            <li><a href="queue_page_2.html">implementing a queue using linked list</a></li>
+            <li><a id="heading" href="videos.html">Videos</a></li>
+            <li><a id="heading" href="compiler.html">Compiler</a></li>
+            </ul>
+        </div>
+
+
+        <div id="menuBtn" class="menu-btn" onclick="toggle()">
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
+        </div>
+
+    <!-- header at top of page -->
+    <div id="header_small">
+        <a href="index.html"><img id="logo_small" src="images/logo.png" alt="codex logo"></a>
+
+    </div>
+
+
+    <br><br><br><br>
+    <div id="main">
+        <br><br><br>
+        <!-- buttons at top of page -->
+        <div id="buttonWrapper">
+            <!-- <button type="button" id="prevP_first"> < previous</button> -->
+            <a href="stack_page_1_2.html"><button type="button" id="nextP">next > </button></a>
+        </div> 
+
+        <!-- where text starts -->
+        <h1>Stack</h1>
+        <h2>What is a stack?</h2>
+        <p>
+        A stack is a linear data structure that applies the <strong>Last-In-First-Out(LIFO)</strong> principle. This
+        means that when
+        inserting and deleting data, the data is inserted at the top of the structure and also deleted from the
+        <i>top</i> of
+        the structure. This is similar to how we stack toy blocks. When adding a new block it is added on <i>top</i> of
+        the
+        last block. Also when removing blocks we have to start by taking away the block at the <i>top</i>.
+        </p>
+
+        <!-- animation -->
+        <img id="stacking" src="animations/stacking_blocks.gif"> <br><br><br><br><br>
+
+        <!-- text -->
+        <p>
+            In the example of the building blocks above we see that a new block is <i>pushed</i> on top of the last one.
+            Also, when removing a block from the stack one must first start by removing the block at the <i>top</i>. The stack 
+            ADT works the same way. Inserting into a stack is done by a function called <strong>'push(value)'</strong> and deleting from the 
+            stack is done by a function called <strong>'pop()'</strong>. this is shown in the example below:
+        </p>
+
+        <!-- animation -->
+        <video id="animation_gif" autoplay loop>
+            <source src="animations/stack_push_pop.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video> <br><br><br><br><br>
+
+        <!-- text -->
+        <p>
+            The stack ADT has 3 main funtions:  <br>
+            &nbsp;&nbsp;&nbsp;<strong>1. push(value)</strong> - inserting data into the stack. <br>
+            &nbsp;&nbsp;&nbsp;<strong>2. pop()</strong> - deleting data from the stack. <br>
+            &nbsp;&nbsp;&nbsp;<strong>3. display()</strong> - displaying the contents of the stack. <br> <br><br>
+
+            The steps to implementing the <strong>push</strong> function are: <br>
+            &nbsp;&nbsp;&nbsp;<strong>1.</strong> Check if the stack is full. (only done when using arrays) <br>
+
+            &nbsp;&nbsp;&nbsp;<strong>2.</strong> If the stack is full, produces an error and exit. <br>
+
+           &nbsp;&nbsp;&nbsp;<strong>3.</strong> If the stack is not full, increments <strong>top</strong> to point
+           next empty space. <br>
+
+            &nbsp;&nbsp;&nbsp;<strong>4.</strong> Inserts data element to the stack location, where top is pointing.
+            <br><br>
+
+            The steps to implementing the <strong>pop</strong> function are: <br>
+           &nbsp;&nbsp;&nbsp;<strong>1.</strong> Check if the stack is empty. <br>
+
+            &nbsp;&nbsp;&nbsp;<strong>2.</strong> If the stack is empty, produces an error and exit. <br>
+
+            &nbsp;&nbsp;&nbsp;<strong>3.</strong> If the stack is not empty, deletes the value at the location that
+            <strong>top</strong> is pointing to.
+            <br>
+
+            &nbsp;&nbsp;&nbsp;<strong>4.</strong> decrements <strong>top</strong> to point to previous value<br><br><br>
+
+
+            A stack can be implemented 2 ways: <br>
+            &nbsp;&nbsp;&nbsp;<strong>1. Using Arrays</strong> <br>
+            &nbsp;&nbsp;&nbsp;<strong>2. Using Linked-Lists</strong> <br>
+        </p>
+
+        <!-- buttons at bottom of page -->
+       	<div id="buttonWrapper">
+       	    <!-- <button type="button" id="prevP_first">< previous</button> -->
+       	    <a href="stack_page_1_2.html"><button type="button" id="nextP"> next > </button></a>
+       	
+       	</div> <br>
+
+        <br><br><br><br><br><br><br>
+    </div>
+ 
+    <div id="footer">
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</body>
+
+</html>

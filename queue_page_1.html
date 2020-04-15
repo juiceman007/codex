@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CODEX</title>
+</head>
+<script type="text/javascript">
+    function toggle() {
+
+    document.getElementById("sidenav").classList.toggle('active');
+    document.getElementById("menuBtn").classList.toggle('btn_active');
+
+    }
+</script>
+<body>
+
+    <div id="sidenav" class="main-menu"">
+        <ul>
+            <li><a id="heading" href="index.html">Home</a></li>
+        <li><a id="heading" href="stack_page_1.html">Stack</a></li>
+        <li><a href="stack_page_1.html">What is a Stack?</a></li>
+        <li><a href="stack_page_1_2.html">implementing a stack using arrays</a></li>
+        <li><a href="stack_page_2.html">implementing a stack using linked list</a></li>
+        <li><a id="heading" href="queue_page_1.html">Queue</a></li>
+        <li><a class="active" href="queue_page_1.html">What is a Queue?</a></li>
+        <li><a href="queue_page_1_2.html">implementing a queue using arrays</a></li>
+        <li><a href="queue_page_2.html">implementing a queue using linked list</a></li>
+        <li><a id="heading" href="videos.html">Videos</a></li>
+        <li><a id="heading" href="compiler.html">Compiler</a></li>
+        </ul>
+    </div>
+
+
+    <div id="menuBtn" class="menu-btn" onclick="toggle()">
+        <div class="menu-bar"></div>
+        <div class="menu-bar"></div>
+        <div class="menu-bar"></div>
+    </div>
+    <div id="header_small">
+        <a href="index.html"><img id="logo_small" src="images/logo.png" alt="codex logo"></a>
+
+    </div>
+
+    <br><br><br><br>
+    <div id="main">
+        <br><br><br>
+        <div id="buttonWrapper">
+            <a href="stack_page_2.html"><button type="button" id="prevP">
+                    < previous</button> </a>
+            <a href="queue_page_1_2.html"><button type="button" id="nextP">next > </button></a>
+        
+        </div> <br>
+
+        <h1>Queue</h1>
+        <h2>What is a queue?</h2>
+        <p>
+            A queue is a linear data structure that applies the <strong>First-In-First-Out(FIFO)</strong> principle. This
+            means that when
+            inserting and deleting data, the data is inserted to the rear of the structure but data is deleted from the
+            <i>front</i> of
+            the structure. this is similar to waiting in a line(queue) at a store to make a puchase. the first person to get in the
+            line will also be the first person to leave the line. This is shown in the visual below:
+        </p>
+
+        <img id="queueing" src="animations/stickman_queue.gif">
+
+        <!-- text -->
+        <p>
+            In the example above we see that when someone new is added to the queue they are added to the <strong>rear</strong>. Also,
+            the first person to leave the queue is also the first person who was at the <strong>front</strong> of the queue. This is 
+            done similarly in the queue ADT. When adding data to the queue we use the function called <strong>enqueue(value)</strong>, the value 
+            is then added to the <strong>rear</strong> of the queue. When deleting data fron the queue we use the function called
+            <strong>dequeue</strong>, this will delete the value that is at the <strong>front</strong> of the queue. This is shown in the example
+             below:
+        </p>
+
+        <!-- animation -->
+        <video id="animation_gif" autoplay loop>
+            <source src="animations/queue(array).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video> <br><br><br><br><br>
+
+        <!-- text -->
+        <p>
+            The queue ADT has 3 funtions: <br>
+            &nbsp;&nbsp;&nbsp;<strong>1. enqueue(value)</strong> - inserting data into the queue. <br>
+            &nbsp;&nbsp;&nbsp;<strong>2. dequeue()</strong> - deleting data from the queue. <br>
+            &nbsp;&nbsp;&nbsp;<strong>3. display()</strong> - displaying the contents of the queue. <br> <br>
+
+            The steps to implementing the <strong>enqueue</strong> function are: <br>
+            &nbsp;&nbsp;&nbsp;<strong>1.</strong> Check if the queue is full. (only done when using arrays) <br>
+
+            &nbsp;&nbsp;&nbsp;<strong>2.</strong> If the queue is full, produces an error and exit. (this can only
+            happen in using an array) <br>
+
+            &nbsp;&nbsp;&nbsp;<strong>3.</strong> If the queue is not full, increments <strong>rear</strong> to point
+            next empty space. <br>
+
+            &nbsp;&nbsp;&nbsp;<strong>4.</strong> Inserts data element to the queue location, where rear is pointing.
+            <br><br>
+
+            The steps to implementing the <strong>dequeue</strong> function are: <br>
+            &nbsp;&nbsp;&nbsp;<strong>1.</strong> Check if the queue is empty. <br>
+
+           &nbsp;&nbsp;&nbsp;<strong>2.</strong> If the queue is empty, produces an error and exit. <br>
+
+            &nbsp;&nbsp;&nbsp;<strong>3.</strong> If the queue is not empty, deletes the value at the location that <strong>front</strong>
+            is pointing to.
+            <br>
+
+           &nbsp;&nbsp;&nbsp;<strong>4.</strong> decrements <strong>front</strong> to point to the next
+           value<br><br><br>
+
+            A queue can be implemented 2 ways: <br>
+            &nbsp;&nbsp;&nbsp;<strong>1. Using Arrays</strong> <br>
+            &nbsp;&nbsp;&nbsp;<strong>2. Using Linked-Lists</strong> <br>
+        </p>
+
+    
+
+        <div id="buttonWrapper">
+            <a href="stack_page_2.html"><button type="button" id="prevP">
+                    < previous</button> </a>
+            <a href="queue_page_2.html"><button type="button" id="nextP">next > </button></a>
+
+        </div> <br>
+
+
+
+        <br><br><br><br><br><br><br>
+    </div>
+
+    <div id="footer">
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</body>
+
+</html>

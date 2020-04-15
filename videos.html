@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CODEX</title>
+</head>
+<script type="text/javascript">
+    function toggle() {
+
+        document.getElementById("sidenav").classList.toggle('active');
+        document.getElementById("menuBtn").classList.toggle('btn_active');
+
+    }
+        
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+    jQuery(function(){
+
+// show all videos
+    jQuery('.all_vids').click(function(){
+     jQuery('.stack_videos').show();
+     jQuery('.queue_videos').show();
+     $('.stack_vids').removeClass('highlight');
+    $('.queue_vids').removeClass('highlight');
+    $('.stack_vids').css('color','gray');
+    $('.queue_vids').css('color','gray');
+    $('.all_vids').addClass('highlight');
+    $('.all_vids').css('color','black');
+    });
+
+// show stack videos
+    jQuery('.stack_vids').click(function(){
+    jQuery('.queue_videos').hide();
+    jQuery('.stack_videos').show();
+    $('.stack_vids').addClass('highlight');
+    $('.stack_vids').css('color','black');
+    $('.queue_vids').removeClass('highlight');
+    $('.queue_vids').css('color','gray');
+    $('.all_vids').removeClass('highlight');
+    $('.all_vids').css('color','gray');
+    });
+
+
+// show queue videos
+jQuery('.queue_vids').click(function(){
+jQuery('.stack_videos').hide();
+jQuery('.queue_videos').show();
+$('.queue_vids').addClass('highlight');
+$('.queue_vids').css('color','black');
+$('.stack_vids').removeClass('highlight');
+ $('.stack_vids').css('color','gray');
+ $('.all_vids').removeClass('highlight');
+ $('.all_vids').css('color','gray');
+});
+
+    });
+</script>
+<body>
+    
+    <div id="sidenav" class="main-menu"">
+        <ul>
+            <li><a id="heading" href="index.html">Home</a></li>
+        <li><a id="heading" href="stack_page_1.html">Stack</a></li>
+        <li><a href="stack_page_1.html">What is a Stack?</a></li>
+        <li><a href="stack_page_1_2.html">implementing a stack using arrays</a></li>
+        <li><a href="stack_page_2.html">implementing a stack using linked list</a></li>
+        <li><a id="heading" href="queue_page_1.html">Queue</a></li>
+        <li><a href="queue_page_1.html">What is a Queue?</a></li>
+        <li><a href="queue_page_1_2.html">implementing a queue using arrays</a></li>
+        <li><a href="queue_page_2.html">implementing a queue using linked list</a></li>
+        <li><a class="active" id="heading" href="videos.html">Videos</a></li>
+        <li><a id="heading" href="compiler.html">Compiler</a></li>
+        </ul>
+    </div>
+
+
+    <div id="menuBtn" class="menu-btn" onclick="toggle()">
+        <div class="menu-bar"></div>
+        <div class="menu-bar"></div>
+        <div class="menu-bar"></div>
+    </div>
+    <div id="header_small">
+        <a href="index.html"><img id="logo_small" src="images/logo.png" alt="codex logo"></a>
+
+    </div>
+
+    <br><br><br><br>
+
+    <div id="main">
+        <br> <br> <br> <br><br> <br> <br> <br><br>
+        <h2>Videos</h2>
+
+        <br> <br> 
+
+        <ul id="video_pages">
+            <li><a class="all_vids highlight">All</a></li>
+            <li><a class="stack_vids" >Stack</a></li>
+            <li><a class="queue_vids" >Queue</a></li>
+        </ul>   
+
+         <br> <br> <br><br> <br> <br> <br><br>
+
+        <div class="stack_videos">
+
+             <h3>Stack videos:</h3>
+            <iframe src="https://www.youtube.com/embed/ZkTzCPs_RRI" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <iframe src="https://www.youtube.com/embed/sFVxsglODoo" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                     
+             
+        </div>
+
+        
+        <div class="queue_videos">
+            <h3>Queue videos:</h3>
+            <iframe src="https://www.youtube.com/embed/jZ7Sds6ttZs" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+
+           <iframe src="https://www.youtube.com/embed/TCmkquGrmDQ" frameborder="0"
+               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+            </div>
+        
+        <br> <br> <br> <br><br> <br> <br> <br>
+    </div> 
+
+    <div id="footer">
+       <br>
+       <br>
+       <br>
+       <br>
+    </div>
+</body>
+</html>
