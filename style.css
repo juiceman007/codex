@@ -350,6 +350,10 @@ body{
             padding: 0;
             font-size: 25px;
         }
+#sidenav ul li:hover{
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+}
 
 #compiler {
     width: 80%;
